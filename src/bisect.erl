@@ -1,16 +1,14 @@
 %% @doc: Space-efficient dictionary implemented using a binary
 %%
-%% This module implements a space-efficient dictionary with no
-%% overhead per entry. Read and write access is O(log n).
+%% This module implements a space-efficient dictionary with no overhead per
+%% entry. Read and write access is O(log n).
 %%
-%% Keys and values are fixed size binaries stored ordered in a larger
-%% binary which acts as a sparse array. All operations are implemented
-%% using a binary search.
+%% Keys and values are fixed size binaries stored ordered in a larger binary
+%% which acts as a sparse array. All operations are implemented using a binary
+%% search.
 %%
-%% As large binaries can be shared among processes, there can be
-%% multiple concurrent readers of an instance of this structure.
-%%
-%% serialize/1 and deserialize/1
+%% As large binaries can be shared among processes, there can be multiple
+%% concurrent readers of an instance of this structure.
 -module(bisect).
 -author('Knut Nesheim <knutin@gmail.com>').
 
